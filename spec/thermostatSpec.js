@@ -33,4 +33,8 @@ describe("Thermostat", () => {
     for (i = 0; i < 11; i++) thermostat.down();
     expect(thermostat.getTemp()).toEqual(10);
   });
+
+  it("has power saving mode turned on by default", () => {
+    expect(thermostat.isPowerSavingModeOn).toBeTruthy;
+  });
 });
