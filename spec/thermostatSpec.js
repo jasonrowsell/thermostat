@@ -34,8 +34,14 @@ describe("Thermostat", () => {
     expect(thermostat.getTemp()).toEqual(10);
   });
 
-  it("has power saving mode turned on by default", () => {
-    expect(thermostat.isPowerSavingModeOn()).toBeTruthy;
+  describe("power saving mode on", () => {
+    it("has power saving mode turned on by default", () => {
+      expect(thermostat.isPowerSavingModeOn()).toBeTruthy;
+    });
+    it("has a maximum temperature of 25", () => {
+      for (i = 0; i < 5; i++) thermostat.up();
+      expect(thermostat.getTemp()).toEqual(25);
+    });
   });
 
   describe("toggling power saving mode", () => {
