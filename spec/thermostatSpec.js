@@ -28,4 +28,9 @@ describe("Thermostat", () => {
       expect(thermostat.getTemp()).toEqual(19);
     });
   });
+
+  it("has a minimum temperature", () => {
+    for (i = 0; i < 11; i++) thermostat.down();
+    expect(thermostat.getTemp()).toEqual(10);
+  });
 });

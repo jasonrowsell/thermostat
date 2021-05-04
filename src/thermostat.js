@@ -1,5 +1,6 @@
 class Thermostat {
   constructor() {
+    this.MIN_TEMP = 10;
     this._temp = 20;
   }
   getTemp() {
@@ -9,6 +10,13 @@ class Thermostat {
     this._temp += 1;
   }
   down() {
-    this._temp -= 1;
+    if (this.isMinTemp()) {
+      return;
+    }
+    this._temp -= 1; // ternary?
+  }
+
+  isMinTemp() {
+    return this._temp === this.MIN_TEMP;
   }
 }
