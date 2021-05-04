@@ -1,7 +1,5 @@
-function Song() {
+class Thermostat {
+  constructor() {
+    this.temp = 20;
+  }
 }
-
-Song.prototype.persistFavoriteStatus = function(value) {
-  // something complicated
-  throw new Error("not yet implemented");
-};
