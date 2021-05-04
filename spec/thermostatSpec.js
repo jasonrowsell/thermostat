@@ -35,6 +35,13 @@ describe("Thermostat", () => {
   });
 
   it("has power saving mode turned on by default", () => {
-    expect(thermostat.isPowerSavingModeOn).toBeTruthy;
+    expect(thermostat.isPowerSavingModeOn()).toBeTruthy;
+  });
+
+  describe("toggling power saving mode", () => {
+    it("can be turned off", () => {
+      thermostat.powerSavingModeOff();
+      expect(thermostat.isPowerSavingModeOn()).toBeFalsy;
+    });
   });
 });
