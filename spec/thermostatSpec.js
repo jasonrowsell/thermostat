@@ -68,18 +68,24 @@ describe("Thermostat", () => {
   });
 
   describe("querying energy usage", () => {
-    it("returns low-usage when temp < 18", () => {
-      for (i = 0; i < 3; i++) thermostat.down();
-      expect(thermostat.usage()).toEqual("low-usage");
+    describe("when temp < 18", () => {
+      it("returns low-usage", () => {
+        for (i = 0; i < 3; i++) thermostat.down();
+        expect(thermostat.usage()).toEqual("low-usage");
+      });
     });
-    it("returns medium-usage when temp <= 25", () => {
-      thermostat.down();
-      expect(thermostat.usage()).toEqual("medium-usage");
+    describe("when temp <= 25", () => {
+      it("returns medium-usage", () => {
+        thermostat.down();
+        expect(thermostat.usage()).toEqual("medium-usage");
+      });
     });
-    it("returns high-usage when temp > 25", () => {
-      thermostat.switchPowerSavingModeOff();
-      for (i = 0; i < 6; i++) thermostat.up();
-      expect(thermostat.usage()).toEqual("high-usage");
+    describe("when temp > 25", () => {
+      it("returns high-usage", () => {
+        thermostat.switchPowerSavingModeOff();
+        for (i = 0; i < 6; i++) thermostat.up();
+        expect(thermostat.usage()).toEqual("high-usage");
+      });
     });
   });
 });
