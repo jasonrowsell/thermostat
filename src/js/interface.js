@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   var temperature = document.querySelector(".temperature"),
+    currentTemperature = document.getElementById("current-temperature"),
+    currentCity = document.getElementById("current-city"),
     temperatureUp = document.getElementById("temperature-up"),
     temperatureDown = document.getElementById("temperature-down"),
     temperatureReset = document.getElementById("temperature-reset"),
@@ -40,12 +42,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function updateTemp() {
     temperature.innerHTML = thermostat._temperature;
-    if (thermostat.usage() === "low-usage") {
-      temperature.style.color = "green";
-    } else if (thermostat.usage() === "high-usage") {
-      temperature.style.color = "red";
-    } else {
-      temperature.style.color = "";
-    }
+    temperature.className = thermostat.usage();
   }
+
+  currentCity.addEventListener("change", (event) => {
+    const city = event.target.value;
+    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric`;
+
+    fetch(url)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        currentTemperature.innerHTML = data.main.temp;
+      });
+  });
 });
