@@ -10,8 +10,6 @@ class Thermostat {
     this._powerSavingMode = true;
   }
 
-  // document.querySelector('temp').innerHTML = getTemp();
-
   up() {
     if (this.isMaxTemp()) {
       return;
