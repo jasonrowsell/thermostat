@@ -23,11 +23,11 @@ class Thermostat {
     if (this.isMinTemp()) {
       return;
     }
-    this._temp -= 1; // ternary?
+    this._temp -= 1;
   }
 
   reset() {
-    this._temp = 20;
+    this._temp = this.DEFAULT_TEMP;
   }
 
   switchPowerSavingModeOff() {
