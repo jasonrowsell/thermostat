@@ -55,6 +55,8 @@ class Thermostat {
   usage() {
     if (this._temp < 18) {
       return "low-usage";
+    } else if (this._temp <= 25) {
+      return "medium-usage";
     }
   }
 }

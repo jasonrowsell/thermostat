@@ -72,5 +72,9 @@ describe("Thermostat", () => {
       for (i = 0; i < 3; i++) thermostat.down();
       expect(thermostat.usage()).toEqual("low-usage");
     });
+    it("returns medium-usage when temp <= 25", () => {
+      thermostat.down();
+      expect(thermostat.usage()).toEqual("medium-usage");
+    });
   });
 });
