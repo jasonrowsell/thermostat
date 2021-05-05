@@ -40,5 +40,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function updateTemp() {
     temperature.innerHTML = thermostat._temperature;
+    if (thermostat.usage() === "low-usage") {
+      temperature.style.color = "green";
+    } else if (thermostat.usage() === "high-usage") {
+      temperature.style.color = "red";
+    } else {
+      temperature.style.color = "";
+    }
   }
 });
