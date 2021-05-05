@@ -1,16 +1,9 @@
-document.addEventListener("DOMContentLoaded", () =>
-{
-  const updateTemperature() = () =>
-  {
-    thermostat._temperature
-  }
-  }
-
-  const thermostat = new Thermostat();
+document.addEventListener("DOMContentLoaded", () => {
   var temperature = document.querySelector(".temperature"),
     temperatureUp = document.getElementById("temperature-up"),
     temperatureDown = document.getElementById("temperature-down");
 
+  const thermostat = new Thermostat();
   temperature.innerHTML = thermostat._temperature;
 
   temperatureUp.addEventListener("click", () => {
