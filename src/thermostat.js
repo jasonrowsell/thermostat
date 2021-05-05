@@ -1,18 +1,16 @@
 class Thermostat {
   constructor() {
+    this.DEFAULT_TEMP = 20;
     this.MIN_TEMP = 10;
     this.MAX_ON_TEMP = 25;
     this.MAX_OFF_TEMP = 32;
-    this.DEFAULT_TEMP = 20;
     this.MEDIUM_USAGE_LIMIT = 18;
     this.HIGH_USAGE_LIMIT = 25;
     this._temp = this.DEFAULT_TEMP;
-    this.powerSavingMode = true;
+    this._powerSavingMode = true;
   }
 
-  getTemp() {
-    return this._temp;
-  }
+  // document.querySelector('temp').innerHTML = getTemp();
 
   up() {
     if (this.isMaxTemp()) {
@@ -32,6 +30,17 @@ class Thermostat {
     this._temp = 20;
   }
 
+  switchPowerSavingModeOff() {
+    this._powerSavingMode = false;
+  }
+
+  switchPowerSavingModeOn() {
+    this._powerSavingMode = true;
+    if (this.getTemp() > this.HIGH_USAGE_LIMIT) {
+      this._temp = this.HIGH_USAGE_LIMIT;
+    }
+  }
+
   isMinTemp() {
     return this._temp === this.MIN_TEMP;
   }
@@ -44,15 +53,7 @@ class Thermostat {
   }
 
   isPowerSavingModeOn() {
-    return this.powerSavingMode;
-  }
-
-  switchPowerSavingModeOff() {
-    this.powerSavingMode = false;
-  }
-
-  switchPowerSavingModeOn() {
-    this.powerSavingMode = true;
+    return this._powerSavingMode;
   }
 
   usage() {
@@ -63,5 +64,9 @@ class Thermostat {
     } else {
       return "high-usage";
     }
+  }
+
+  getTemp() {
+    return this._temp;
   }
 }

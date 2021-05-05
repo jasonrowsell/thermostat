@@ -53,6 +53,12 @@ describe("Thermostat", () => {
       for (i = 0; i < 6; i++) thermostat.up();
       expect(thermostat.getTemp()).toEqual(25);
     });
+    it("resets temperature to 25 when turned on", () => {
+      thermostat.switchPowerSavingModeOff();
+      for (i = 0; i < 6; i++) thermostat.up();
+      thermostat.switchPowerSavingModeOn();
+      expect(thermostat.getTemp()).toEqual(25);
+    });
   });
 
   describe("power saving mode off", () => {
