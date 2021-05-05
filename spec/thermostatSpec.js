@@ -7,36 +7,36 @@ describe("Thermostat", () => {
 
   describe("initialisation", () => {
     it("has an initial reading of 20", () => {
-      expect(thermostat._temp).toEqual(20);
+      expect(thermostat._temperature).toEqual(20);
     });
   });
 
   it("has an initial reading of 20", () => {
-    expect(thermostat._temp).toEqual(20);
+    expect(thermostat._temperature).toEqual(20);
   });
 
   it("has a minimum temperature", () => {
     for (i = 0; i < 11; i++) thermostat.down();
-    expect(thermostat.getTemp()).toEqual(10);
+    expect(thermostat.getTemperature()).toEqual(10);
   });
 
   it("can have the temperature resetted", () => {
     thermostat.up();
     thermostat.reset();
-    expect(thermostat._temp).toEqual(20);
+    expect(thermostat._temperature).toEqual(20);
   });
 
   describe("cicking the up button", () => {
     it("increase the temperature", () => {
       thermostat.up();
-      expect(thermostat.getTemp()).toEqual(21);
+      expect(thermostat.getTemperature()).toEqual(21);
     });
   });
 
   describe("cicking the down button", () => {
     it("decreases the temperature", () => {
       thermostat.down();
-      expect(thermostat.getTemp()).toEqual(19);
+      expect(thermostat.getTemperature()).toEqual(19);
     });
   });
 
@@ -51,13 +51,13 @@ describe("Thermostat", () => {
     });
     it("has a maximum temperature of 25", () => {
       for (i = 0; i < 6; i++) thermostat.up();
-      expect(thermostat.getTemp()).toEqual(25);
+      expect(thermostat.getTemperature()).toEqual(25);
     });
     it("resets temperature to 25 when turned on", () => {
       thermostat.switchPowerSavingModeOff();
       for (i = 0; i < 6; i++) thermostat.up();
       thermostat.switchPowerSavingModeOn();
-      expect(thermostat.getTemp()).toEqual(25);
+      expect(thermostat.getTemperature()).toEqual(25);
     });
   });
 
@@ -69,7 +69,7 @@ describe("Thermostat", () => {
     it("has a maximum temperature of 32", () => {
       thermostat.switchPowerSavingModeOff();
       for (i = 0; i < 13; i++) thermostat.up();
-      expect(thermostat.getTemp()).toEqual(32);
+      expect(thermostat.getTemperature()).toEqual(32);
     });
   });
 

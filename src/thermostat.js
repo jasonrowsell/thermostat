@@ -1,31 +1,31 @@
 class Thermostat {
   constructor() {
-    this.DEFAULT_TEMP = 20;
-    this.MIN_TEMP = 10;
-    this.MAX_ON_TEMP = 25;
-    this.MAX_OFF_TEMP = 32;
+    this.DEFAULT_TEMPERATURE = 20;
+    this.MIN_TEMPERATURE = 10;
+    this.MAX_ON_TEMPERATURE = 25;
+    this.MAX_OFF_TEMPERATURE = 32;
     this.MEDIUM_USAGE_LIMIT = 18;
     this.HIGH_USAGE_LIMIT = 25;
-    this._temp = this.DEFAULT_TEMP;
+    this._temperature = this.DEFAULT_TEMPERATURE;
     this._powerSavingMode = true;
   }
 
   up() {
-    if (this.isMaxTemp()) {
+    if (this.isMaxTemperature()) {
       return;
     }
-    this._temp += 1;
+    this._temperature += 1;
   }
 
   down() {
-    if (this.isMinTemp()) {
+    if (this.isMinTemperature()) {
       return;
     }
-    this._temp -= 1;
+    this._temperature -= 1;
   }
 
   reset() {
-    this._temp = this.DEFAULT_TEMP;
+    this._temperature = this.DEFAULT_TEMPERATURE;
   }
 
   switchPowerSavingModeOff() {
@@ -34,20 +34,20 @@ class Thermostat {
 
   switchPowerSavingModeOn() {
     this._powerSavingMode = true;
-    if (this.getTemp() > this.HIGH_USAGE_LIMIT) {
-      this._temp = this.HIGH_USAGE_LIMIT;
+    if (this.getTemperature() > this.HIGH_USAGE_LIMIT) {
+      this._temperature = this.HIGH_USAGE_LIMIT;
     }
   }
 
-  isMinTemp() {
-    return this._temp === this.MIN_TEMP;
+  isMinTemperature() {
+    return this._temperature === this.MIN_TEMPERATURE;
   }
 
-  isMaxTemp() {
+  isMaxTemperature() {
     if (this.isPowerSavingModeOn()) {
-      return this._temp === this.MAX_ON_TEMP;
+      return this._temperature === this.MAX_ON_TEMPERATURE;
     }
-    return this._temp === this.MAX_OFF_TEMP;
+    return this._temperature === this.MAX_OFF_TEMPERATURE;
   }
 
   isPowerSavingModeOn() {
@@ -55,16 +55,16 @@ class Thermostat {
   }
 
   usage() {
-    if (this._temp < this.MEDIUM_USAGE_LIMIT) {
+    if (this._temperature < this.MEDIUM_USAGE_LIMIT) {
       return "low-usage";
-    } else if (this._temp <= this.HIGH_USAGE_LIMIT) {
+    } else if (this._temperature <= this.HIGH_USAGE_LIMIT) {
       return "medium-usage";
     } else {
       return "high-usage";
     }
   }
 
-  getTemp() {
-    return this._temp;
+  getTemperature() {
+    return this._temperature;
   }
 }
