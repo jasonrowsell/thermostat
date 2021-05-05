@@ -38,15 +38,20 @@ describe("Thermostat", () => {
     it("has power saving mode turned on by default", () => {
       expect(thermostat.isPowerSavingModeOn()).toBeTruthy;
     });
+    it("can be turned on", () => {
+      thermostat.switchPowerSavingModeOff();
+      thermostat.switchPowerSavingModeOn();
+      expect(thermostat.isPowerSavingModeOn()).toBeTruthy;
+    });
     it("has a maximum temperature of 25", () => {
-      for (i = 0; i < 5; i++) thermostat.up();
+      for (i = 0; i < 6; i++) thermostat.up();
       expect(thermostat.getTemp()).toEqual(25);
     });
   });
 
   describe("toggling power saving mode", () => {
     it("can be turned off", () => {
-      thermostat.powerSavingModeOff();
+      thermostat.switchPowerSavingModeOff();
       expect(thermostat.isPowerSavingModeOn()).toBeFalsy;
     });
   });
