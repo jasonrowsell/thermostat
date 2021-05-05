@@ -4,15 +4,21 @@ document.addEventListener("DOMContentLoaded", () => {
     temperatureDown = document.getElementById("temperature-down");
 
   const thermostat = new Thermostat();
-  temperature.innerHTML = thermostat._temperature;
+  updateTemp();
 
   temperatureUp.addEventListener("click", () => {
     thermostat.up();
-    temperature.innerHTML = thermostat._temperature;
+    updateTemp();
   });
 
   temperatureDown.addEventListener("click", () => {
     thermostat.down();
-    temperature.innerHTML = thermostat._temperature;
+    updateTemp();
   });
+
+  // updates temperature reading
+
+  function updateTemp() {
+    temperature.innerHTML = thermostat._temperature;
+  }
 });
