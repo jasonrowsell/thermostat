@@ -15,6 +15,17 @@ describe("Thermostat", () => {
     expect(thermostat._temp).toEqual(20);
   });
 
+  it("has a minimum temperature", () => {
+    for (i = 0; i < 11; i++) thermostat.down();
+    expect(thermostat.getTemp()).toEqual(10);
+  });
+
+  it("can have the temperature resetted", () => {
+    thermostat.up();
+    thermostat.reset();
+    expect(thermostat._temp).toEqual(20);
+  });
+
   describe("cicking the up button", () => {
     it("increase the temperature", () => {
       thermostat.up();
@@ -27,11 +38,6 @@ describe("Thermostat", () => {
       thermostat.down();
       expect(thermostat.getTemp()).toEqual(19);
     });
-  });
-
-  it("has a minimum temperature", () => {
-    for (i = 0; i < 11; i++) thermostat.down();
-    expect(thermostat.getTemp()).toEqual(10);
   });
 
   describe("power saving mode on", () => {

@@ -25,6 +25,10 @@ class Thermostat {
     this._temp -= 1; // ternary?
   }
 
+  reset() {
+    this._temp = 20;
+  }
+
   isMinTemp() {
     return this._temp === this.MIN_TEMP;
   }
