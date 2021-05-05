@@ -42,12 +42,12 @@ describe("Thermostat", () => {
 
   describe("power saving mode on", () => {
     it("has power saving mode turned on by default", () => {
-      expect(thermostat.isPowerSavingModeOn()).toBeTruthy;
+      expect(thermostat.isPowerSavingModeOn()).toEqual(true);
     });
     it("can be turned on", () => {
       thermostat.switchPowerSavingModeOff();
       thermostat.switchPowerSavingModeOn();
-      expect(thermostat.isPowerSavingModeOn()).toBeTruthy;
+      expect(thermostat.isPowerSavingModeOn()).toEqual(true);
     });
     it("has a maximum temperature of 25", () => {
       for (i = 0; i < 6; i++) thermostat.up();
@@ -58,7 +58,7 @@ describe("Thermostat", () => {
   describe("power saving mode off", () => {
     it("can be turned off", () => {
       thermostat.switchPowerSavingModeOff();
-      expect(thermostat.isPowerSavingModeOn()).toBeFalsy;
+      expect(thermostat.isPowerSavingModeOn()).toEqual(false);
     });
     it("has a maximum temperature of 32", () => {
       thermostat.switchPowerSavingModeOff();
@@ -75,6 +75,11 @@ describe("Thermostat", () => {
     it("returns medium-usage when temp <= 25", () => {
       thermostat.down();
       expect(thermostat.usage()).toEqual("medium-usage");
+    });
+    it("returns high-usage when temp > 25", () => {
+      thermostat.switchPowerSavingModeOff();
+      for (i = 0; i < 6; i++) thermostat.up();
+      expect(thermostat.usage()).toEqual("high-usage");
     });
   });
 });
