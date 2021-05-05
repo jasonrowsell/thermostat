@@ -51,4 +51,10 @@ class Thermostat {
   switchPowerSavingModeOn() {
     this.powerSavingMode = true;
   }
+
+  usage() {
+    if (this._temp < 18) {
+      return "low-usage";
+    }
+  }
 }

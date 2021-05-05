@@ -66,4 +66,11 @@ describe("Thermostat", () => {
       expect(thermostat.getTemp()).toEqual(32);
     });
   });
+
+  describe("querying energy usage", () => {
+    it("returns low-usage when temp < 18", () => {
+      for (i = 0; i < 3; i++) thermostat.down();
+      expect(thermostat.usage()).toEqual("low-usage");
+    });
+  });
 });
