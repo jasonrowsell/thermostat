@@ -6,15 +6,18 @@ class Thermostat {
     this._temp = 20;
     this.powerSavingMode = true;
   }
+
   getTemp() {
     return this._temp;
   }
+
   up() {
     if (this.isMaxTemp()) {
       return;
     }
     this._temp += 1;
   }
+
   down() {
     if (this.isMinTemp()) {
       return;
