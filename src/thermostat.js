@@ -10,10 +10,8 @@ class Thermostat {
     return this._temp;
   }
   up() {
-    if (this.isPowerSavingModeOn === true) {
-      if (this.isMaxOnTemp() === true) {
-        return;
-      }
+    if (this.isMaxTemp()) {
+      return;
     }
     this._temp += 1;
   }
@@ -28,9 +26,12 @@ class Thermostat {
     return this._temp === this.MIN_TEMP;
   }
 
-  // isMaxTemp() {
-  //   if (this.isPowerSavingModeOn())
-  // }
+  isMaxTemp() {
+    if (this.isPowerSavingModeOn()) {
+      return this._temp === this.MAX_ON;
+    }
+    return this._temp === this.MAX_OFF;
+  }
 
   isPowerSavingModeOn() {
     return this.powerSavingMode;
