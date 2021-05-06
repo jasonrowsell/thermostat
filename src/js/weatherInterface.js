@@ -1,7 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
-  var currentTemperature = document.getElementById("current-temperature"),
-    currentCity = document.getElementById("current-city");
+  var dateDayName = document.querySelector(".date-dayname"),
+    days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ],
+    daysAbbreviated = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  (currentDate = new Date()),
+    (currentCity = document.getElementById("current-city"));
 
+  dateDayName.innerHTML = days[currentDate.getDay()];
   updateTemperature();
 
   function updateTemperature() {
