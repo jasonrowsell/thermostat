@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   var temperature = document.querySelector(".temperature"),
-    currentTemperature = document.getElementById("current-temperature"),
-    currentCity = document.getElementById("current-city"),
     temperatureUp = document.getElementById("temperature-up"),
     temperatureDown = document.getElementById("temperature-down"),
     temperatureReset = document.getElementById("temperature-reset"),
