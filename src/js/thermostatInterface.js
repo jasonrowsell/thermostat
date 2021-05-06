@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const thermostat = new Thermostat();
   updateTemp();
+  updateWeather();
 
   temperatureUp.addEventListener("click", () => {
     thermostat.up();
@@ -45,16 +46,20 @@ document.addEventListener("DOMContentLoaded", () => {
     temperature.className = thermostat.usage();
   }
 
-  currentCity.addEventListener("change", (event) => {
-    const city = event.target.value;
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric`;
+  // updates weather for city
 
-    fetch(url)
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        currentTemperature.innerHTML = data.main.temp;
-      });
-  });
+  function updateWeather() {
+    currentCity.addEventListener("change", (event) => {
+      const city = event.target.value;
+      const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric`;
+
+      fetch(url)
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          currentTemperature.innerHTML = data.main.temp;
+        });
+    });
+  }
 });
