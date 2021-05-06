@@ -4,19 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/weather.css" />
     <title>Weather</title>
   </head>
   <body>
-    <section>
-      <div class="container"></div>
-      <h1>Current temperature: <span id="current-temperature">20</span></h1>
-      <select id="current-city">
-        <option value="London">London</option>
-        <option value="New york">New York</option>
-        <option value="Paris">Paris</option>
-        <option value="Tokyo">Tokyo</option>
-      </select>
-    </section>
+    <div class="container">
+      <div class="weather-side">
+        <div class="weather-gradient"></div>
+        <div class="date-container">
+          <h2 class="date-dayname">Thursday</h2>
+          <span class="date-day">6 May 2021</span>
+          <i class="location-icon" data-feather="map-pins"></i>
+          <span class="location">London</span>
+        </div>
+      </div>
+    </div>
+    <!-- <h1>Current temperature: <span id="current-temperature">20</span></h1>
+    <select id="current-city">
+      <option value="London">London</option>
+      <option value="New york">New York</option>
+      <option value="Paris">Paris</option>
+      <option value="Tokyo">Tokyo</option>
+    </select> -->
     <script src="../js/weatherInterface.js"></script>
   </body>
 </html>
