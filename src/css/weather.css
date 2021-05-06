@@ -1,12 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
-:root {
+* {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   line-height: 1.25rem;
 }
 :root {
   --gradient: linear-gradient(135deg, #72edf2 10%, #5151e5 100%);
+}
+.clear {
+  clear: both;
 }
 body {
   margin: 0;
@@ -42,11 +45,11 @@ body {
   -webkit-box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
   -webkit-transition: -webkit-transform 300ms ease;
-  transition: transform 300ms ease;
+  transition: -webkit-transform transform 300ms ease;
   -o-transition: transform 300ms ease;
-  transition: transform 300ms ease;
-  -webkit-transform: translateZ(0) scale(1.02) perspective(1000px);
-  transform: translateZ(0) scale(1.02) perspective(1000px);
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+  -webkit-transform: translateZ(0) scale(1.1) perspective(1000px);
+  transform: translateZ(0) scale(1.1) perspective(1000px);
   float: left;
 }
 .weather-side:hover {
@@ -83,7 +86,7 @@ body {
   display: inline-block;
   height: 0.8em;
   width: auto;
-  margin-right: 5px;
+  margin-right: 7px;
 }
 .weather-container {
   position: absolute;
@@ -110,13 +113,13 @@ body {
 }
 .today-info {
   padding: 15px;
-  margin: 0 25px 25px;
+  margin: 0 25px 25px 25px;
   border-radius: 10px;
 }
 .today-info > div:not(:last-child) {
   margin: 0 0 10px 0;
 }
-.today-info > div.title {
+.today-info > div .title {
   float: left;
   font-weight: 700;
 }
@@ -150,13 +153,50 @@ body {
   -webkit-box-shadow: 0 0 40px -5px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 40px -5px rgba(0, 0, 0, 0.2);
 }
-.week-list > li.active {
-  background: white;
-  color: #222831;
-  border-radius: 10px;
-}
 .week-list > li .day-name {
   display: block;
   margin: 10px 0 0 0;
   text-align: center;
+}
+.week-list > li .day-icon {
+  display: block;
+  height: 30px;
+  width: auto;
+  margin: 0 auto;
+}
+.week-list > li .day-temp {
+  display: block;
+  text-align: center;
+  margin: 10px 0 0 0;
+  font-weight: 700;
+}
+.location-container {
+  padding: 25px 35px;
+}
+.location-button {
+  outline: none;
+  width: 100%;
+  color: #fff;
+  background-image: var(--gradient);
+  font-weight: 700;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.25);
+  -webkit-transition: transform 200ms ease;
+  -o-transition: transform 200ms ease;
+  transition: transform 200ms ease;
+}
+.location-button:hover {
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95);
+}
+.location-button .feather {
+  height: 1rem;
+  width: auto;
+  margin-right: 5px;
 }
