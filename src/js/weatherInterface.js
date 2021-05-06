@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
           return response.json();
         })
         .then((data) => {
-          currentTemperature.innerHTML = data.main.temp_min;
+          currentTemperature.innerHTML = data.main.temp;
         });
     });
   }
