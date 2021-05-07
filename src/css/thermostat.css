@@ -22,6 +22,15 @@ body:before {
   z-index: -1;
   background: linear-gradient(135deg, #09203f, #537895);
 }
+.test {
+  width: 75%;
+  margin: auto;
+  padding: 35px 0;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: -100px;
+}
 .navbar {
   width: 75%;
   margin: auto;
@@ -65,9 +74,10 @@ body:before {
   border-radius: 50%;
 }
 .thermostat {
-  position: absolute;
+  position: relative;
   width: 400px;
   height: 400px;
+  top: 280px;
   background: #222831;
   box-shadow: inset 0px -6px 1px 2px rgba(0, 0, 0, 0.35),
     0px 7px 40px 11px rgba(84, 81, 97, 0.4);
@@ -156,10 +166,10 @@ body:before {
   border-radius: 100%;
   clip: rect(0px, 178px, 356px, 0px);
 }
-.bar .fill1 {
+.fill1 {
   background: -webkit-linear-gradient(top, #ff4900 20%, #ff4900 100%);
 }
-.bar .fill2 {
+.fill2 {
   background: -webkit-linear-gradient(top, #ff4900 40%, #ff9e23 100%);
 }
 .bar .right {
@@ -221,6 +231,10 @@ body:before {
   transition: opacity 0.3s;
   cursor: pointer;
 }
+.arrow-btn {
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
 .minus {
   position: absolute;
   animation: arrow-left 1s forwards;
@@ -251,6 +265,7 @@ body:before {
   top: -20px;
   right: 30px;
 }
+
 @-webkit-keyframes shadow {
   0% {
     transform: translate(-50%, -50%) rotate(-190deg);
