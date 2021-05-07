@@ -249,8 +249,12 @@ body:before {
 .reset-button:hover {
   color: #ff4900;
 }
+.psm-container {
+  position: relative;
+  top: 1000px;
+}
 .footer {
-  color: white;
+  color: rgba(255, 255, 255, 0.5);
   position: absolute;
   bottom: 0;
   width: 100%;
