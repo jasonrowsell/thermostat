@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   var temperature = document.querySelector(".temperature"),
-    temperatureUp = document.getElementById("temperature-up"),
-    temperatureDown = document.getElementById("temperature-down"),
+    innerTemperature = document.querySelector(".ext"),
+    temperatureUp = document.querySelector(".minus-btn"),
+    temperatureDown = document.querySelector(".plus-btn"),
     temperatureReset = document.getElementById("temperature-reset"),
     powerSavingMode = document.getElementById("psm"),
     powerSavingModeOn = document.getElementById("psm-on"),
@@ -39,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // updates temperature reading
 
   function updateTemp() {
-    temperature.innerHTML = thermostat._temperature;
-    temperature.className = thermostat.usage();
+    temperature.innerText = thermostat._temperature;
+    innerTemperature.innerText = thermostat._temperature;
   }
 });
