@@ -4,7 +4,7 @@ Thermostat app built with JavaScript, TDD using Jasmine. The app is built based 
 
 ## 👀 Live demo
 
-**[Check it out here.](#)** You can change and reset the temperature, as well as alter the status of Power Save.
+**[Check it out here.](https://jasonrowsell-thermostat.herokuapp.com/)** You can change and reset the temperature, as well as alter the status of Power Save.
 
 ![Home](./public/images/home.gif)
 ![Green](./public/images/green.png)
