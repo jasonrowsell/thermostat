@@ -276,7 +276,7 @@ body:before {
   cursor: pointer;
   box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.7);
 }
-.psm-button:hover {
+.psm-side:hover {
   -webkit-transform: scale(1.1) perspective(1500px) rotateY(10deg);
   transform: scale(1.1) perspective(1500px) rotateY(10deg);
 }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/thermostat.css" />
+    <title>Thermostat</title>
+  </head>
+  <body>
+    <div class="thermostat">
+      <div class="bar">
+        <div class="inner-bar"></div>
+        <div class="hold left">
+          <div class="fill fill1" id="fill1"></div>
+        </div>
+        <div class="hold right">
+          <div class="fill fill2" id="fill2"></div>
+        </div>
+        <span>Thermostat</span>
+      </div>
+      <div class="shadow">
+        <div class="shadow-cube"></div>
+      </div>
+      <div class="number">
+        <span class="ext">20</span>
+      </div>
+      <div class="center">
+        <span class="arrow minus"><button class="minus-btn"><</button></span>
+        <span class="arrow plus"><button class="plus-btn">></button></span>
+        <div class="small">
+          <span class="temperature">20</span>
+        </div>
+      </div>
+      <div class="reset">
+        <button class="reset-button">
+          <span>Reset</span>
+        </button>
+      </div>
+    </div>
+    <div class="psm-container">
+    Power Saving Mode is: <span id="psm">On</span></br>
+    <div class="psm-buttons">
+    <button class="psm-button" id="psm-on">On</button>
+    <button class="psm-button" id="psm-off">Off</button>
+  </div>
+  </div>
+    <script src="../js/thermostat.js"></script>
+    <script src="../js/thermostatInterface.js"></script>
+    <footer class="footer">Jason Rowsell</footer>
+  </body>
+</html>
