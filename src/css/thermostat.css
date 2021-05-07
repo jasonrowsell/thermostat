@@ -22,6 +22,38 @@ body:before {
   z-index: -1;
   background: linear-gradient(135deg, #09203f, #537895);
 }
+.navbar {
+  width: 75%;
+  margin: auto;
+  padding: 35px 0;
+  align-items: center;
+  justify-content: space-between;
+  transform: translateX(29%);
+}
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 30px;
+  position: relative;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+.navbar ul li::after {
+  content: "";
+  height: 3px;
+  width: 0%;
+  background: white;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+.navbar ul li:hover::after {
+  width: 100%;
+}
 .center_radius,
 .thermostat,
 .thermostat .bar,

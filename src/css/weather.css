@@ -38,7 +38,7 @@ body {
 .navbar ul li {
   list-style: none;
   display: inline-block;
-  margin: 0 20px;
+  margin: 0 30px;
   position: relative;
 }
 .navbar ul li a {
