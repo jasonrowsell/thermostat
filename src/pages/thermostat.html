@@ -4,11 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/thermostat.css">
+    <link rel="stylesheet" href="../css/thermostat.css" />
     <title>Thermostat</title>
   </head>
-  <body>
-    <h1>Thermostat</h1>
+  <!-- <h1>Thermostat</h1>
     <div class="temperature"></div>
     <div class="temperature-toggle">
       <button id="temperature-up">+</button>
@@ -18,8 +17,40 @@
 
     Power Saving Mode is: <span id="psm">On</span></br>
     <button id="psm-on">On</button>
-    <button id="psm-off">Off</button>
-
+    <button id="psm-off">Off</button> -->
+  <body>
+    <div class="navbar">
+      <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="./weather.html">Weather</a></li>
+        <li><a href="/login">Login</a></li>
+      </ul>
+    </div>
+    <div class="thermostat">
+      <div class="bar">
+        <div class="inner_bar"></div>
+        <div class="hold left">
+          <div class="fill fill1"></div>
+        </div>
+        <div class="hold right">
+          <div class="fill fill2"></div>
+        </div>
+        <span>Thermostat</span>
+      </div>
+      <div class="shadow">
+        <div class="shadow-cube"></div>
+      </div>
+      <div class="number">
+        <span class="ext">19</span>
+      </div>
+      <div class="center">
+        <span class="arrow minus"><i class="arrow-icon"><</i></span>
+        <span class="arrow plus"><i class="arrow-icon">></i></span>
+        <div class="small">
+          <span class="heat">19</span>
+        </div>
+      </div>
+    </div>
     <script src="../js/thermostat.js"></script>
     <script src="../js/thermostatInterface.js"></script>
   </body>
