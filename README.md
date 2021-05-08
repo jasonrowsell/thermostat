@@ -29,3 +29,10 @@ open src/pages/index.html
 ```
 
 At this point the application should be running on your machine at file:///Users/username/thermostat/src/index.html (or equivalent)
+
+## Built Using
+
+- HTML
+- CSS
+- JavaScript
+- Jasmine(testing)
