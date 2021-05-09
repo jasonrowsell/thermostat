@@ -25,10 +25,10 @@ open the html file from terminal
 
 ```sh
 cd thermostat
-open src/pages/index.html
+open public//index.html
 ```
 
-At this point the application should be running on your machine at file:///Users/username/thermostat/src/index.html (or equivalent)
+At this point the application should be running on your machine at file:///Users/username/thermostat/public/index.html (or equivalent)
 
 ## Built Using
 
