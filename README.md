@@ -1,5 +1,7 @@
 # Thermostat App
 
+[![CodeFactor](https://www.codefactor.io/repository/github/jasonrowsell/thermostat/badge/main)](https://www.codefactor.io/repository/github/jasonrowsell/thermostat/overview/main)
+
 Thermostat app built with JavaScript, TDD using Jasmine. The app is built based on these given [requirements.](requirements.md)
 
 ## 👀 Live demo
