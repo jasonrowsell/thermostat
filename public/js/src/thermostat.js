@@ -56,11 +56,11 @@ class Thermostat {
 
   usage() {
     if (this._temperature < this.MEDIUM_USAGE_LIMIT) {
-      return "low-usage";
+      return 'low-usage';
     } else if (this._temperature <= this.HIGH_USAGE_LIMIT) {
-      return "medium-usage";
+      return 'medium-usage';
     } else {
-      return "high-usage";
+      return 'high-usage';
     }
   }
 
@@ -68,3 +68,5 @@ class Thermostat {
     return this._temperature;
   }
 }
+
+module.exports = Thermostat;
