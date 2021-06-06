@@ -13,10 +13,6 @@ describe('Thermostat', () => {
     });
   });
 
-  it('has an initial reading of 20', () => {
-    expect(thermostat._temperature).toEqual(20);
-  });
-
   it('has a minimum temperature', () => {
     for (i = 0; i < 11; i++) thermostat.down();
     expect(thermostat.getTemperature()).toEqual(10);
