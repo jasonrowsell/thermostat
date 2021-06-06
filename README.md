@@ -238,7 +238,7 @@ Extensive testing and error checking was undertaken throughout the development p
 
 Using Jest I was able to test if the code was working as expected. The test files can be found [here](public/js/__tests__).
 
-![Test Coverage](#./public/images/tests.png)
+![Test Coverage](./public/images/tests.png)
 
 ### Technologies Used
 
