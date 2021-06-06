@@ -1,8 +1,10 @@
 # Thermostat App
 
-[![CodeFactor](https://www.codefactor.io/repository/github/jasonrowsell/thermostat/badge/main)](https://www.codefactor.io/repository/github/jasonrowsell/thermostat/overview/main)
+[![CodeFactor](https://www.codefactor.io/repository/github/jasonrowsell/thermostat/badge/main)](https://www.codefactor.io/repository/github/jasonrowsell/thermostat/overview/main) [![Build Status](https://travis-ci.com/jasonrowsell/thermostat.svg?branch=main)](https://travis-ci.com/jasonrowsell/thermostat) [![codecov](https://codecov.io/gh/jasonrowsell/thermostat/branch/main/graph/badge.svg?token=JXC2QFG78J)](https://codecov.io/gh/jasonrowsell/thermostat)
 
 **[Check it out here.](https://jasonrowsell-thermostat.herokuapp.com/)**
+
+<!-- Table of Contents -->
 
 ## Table of Contents
 
@@ -20,12 +22,11 @@
   - [Power Saving Mode](#power-saving-mode)
   - [Reset](#reset)
 - [Design](#design)
-
   - [Testing](#testing)
   - [Test Coverage](#test-coverage)
   - [Technologies Used](#technologies-used)
 
-  <!-- Overview -->
+<!-- Overview -->
 
 ## Overview
 
