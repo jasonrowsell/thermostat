@@ -4,6 +4,8 @@
 
 **[Check it out here.](https://jasonrowsell-thermostat.herokuapp.com/)**
 
+<!-- Table of Contents -->
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -20,12 +22,11 @@
   - [Power Saving Mode](#power-saving-mode)
   - [Reset](#reset)
 - [Design](#design)
-
   - [Testing](#testing)
   - [Test Coverage](#test-coverage)
   - [Technologies Used](#technologies-used)
 
-  <!-- Overview -->
+<!-- Overview -->
 
 ## Overview
 
