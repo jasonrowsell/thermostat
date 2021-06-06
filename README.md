@@ -47,6 +47,8 @@ Thermostat app to regulate a household's temperature, with minimum and maximum l
 
 [Contents](#table-of-contents)
 
+--------
+
 <!-- Getting Started -->
 
 ## Getting Started
@@ -133,6 +135,8 @@ Thermostat {
 
 [Contents](#table-of-contents)
 
+--------
+
 <!-- Spec -->
 
 ## Spec
@@ -151,6 +155,8 @@ Thermostat {
 - (In the challenges where we add an interface, low-usage will be indicated wi- green, medium-usage indicated with black, high-usage indicated with red.)
 
 [Contents](#table-of-contents)
+
+--------
 
 <!-- Features -->
 
@@ -177,6 +183,8 @@ The household has the option to enable or disable Power Saving Mode. If this opt
 The household has the option to reset the temperature to a regulated standard of 20 degrees. This can be selected by clicking a single button.
 
 [Contents](#table-of-contents)
+
+--------
 
 <!-- Design -->
 
