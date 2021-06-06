@@ -32,16 +32,6 @@
 
 Thermostat app to regulate a household's temperature, with minimum and maximum limits to maintian a cost-effective energy plan. The program focuses on test driven development (TDD), prototypal behaviour and DOM manipulation.
 
-<div align="center">
-
----
-
-[Top](#table-of-contents)
-
----
-
-</div>
-
 <!-- Live Demo -->
 
 ## Live Demo
@@ -55,15 +45,7 @@ Thermostat app to regulate a household's temperature, with minimum and maximum l
 ![Orange](./public/images/orange.png)
 ![Red](./public/images/red.png)
 
-<div align="center">
-
----
-
-[Top](#table-of-contents)
-
----
-
-</div>
+[Contents](#table-of-contents)
 
 <!-- Getting Started -->
 
@@ -149,15 +131,7 @@ Thermostat {
 21
 ```
 
-<div align="center">
-
----
-
-[Top](#table-of-contents)
-
----
-
-</div>
+[Contents](#table-of-contents)
 
 <!-- Spec -->
 
@@ -210,15 +184,7 @@ The household has the option to enable or disable Power Saving Mode. If this opt
 
 The household has the option to reset the temperature to a regulated standard of 20 degrees. This can be selected by clicking a single button.
 
-<div align="center">
-
----
-
-[Top](#table-of-contents)
-
----
-
-</div>
+[Contents](#table-of-contents)
 
 <!-- Design -->
 
