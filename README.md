@@ -238,6 +238,8 @@ Extensive testing and error checking was undertaken throughout the development p
 
 Using Jest I was able to test if the code was working as expected. The test files can be found [here](public/js/__tests__).
 
+![Test Coverage](#test-coverage)
+
 ### Technologies Used
 
 - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
